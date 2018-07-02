@@ -25,7 +25,9 @@ app.use(bodyParser.json())
 app.use(morgan('dev'))
 
 // set the secret key variable for jwt
-app.set('jwt-secret', config.secret)
+app.set('jwt-secret', config.secret);
+
+console.log("## " + app.set("jwt-secret"));
 
 // index page, just for testing
 app.get('/', (req, res) => {
